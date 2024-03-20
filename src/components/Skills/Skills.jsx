@@ -15,21 +15,29 @@ export default function Skills() {
 					text={"Download CV"}
 					backgroundColor={colors.themeColor}
 					borderColor={colors.white}
-					maxWidth={"8vw"}
+					maxWidth={"10vw"}
+					marginTop={"10px"}
+					fontSize="1.25vmax"
 				/>
-				<Card text={"React"} marginTop={"200px"} />
+				<Card
+					text={"React"}
+					marginTop={"10vw"}
+					iconComponent={
+						<FaFigma size={"8vw"} color={colors.themeColor} />
+					}
+				/>
 			</div>
 			<div style={styles.column2}>
 				<Card
 					text={"MongoDb"}
-					marginTop={"150px"}
+					marginTop={"8vw"}
 					iconComponent={
 						<BiLogoMongodb size={"8vw"} color={colors.themeColor} />
 					}
 				/>
 				<Card
 					text={"MongoDb"}
-					marginTop={"100px"}
+					marginTop={"5vw"}
 					iconComponent={
 						<FaMobileAlt size={"8vw"} color={colors.themeColor} />
 					}
@@ -39,7 +47,7 @@ export default function Skills() {
 				<Card text={"MongoDb"} />
 				<Card
 					text={"MongoDb"}
-					marginTop={"100px"}
+					marginTop={"5vw"}
 					iconComponent={
 						<FaNodeJs size={"8vw"} color={colors.themeColor} />
 					}
@@ -53,18 +61,15 @@ const styles = {
 	container: {
 		marginTop: "50px",
 		display: "grid",
-		gridTemplateColumns: "auto auto auto auto",
+		gridTemplateColumns: "auto auto auto auto auto",
 		paddingLeft: "2vw",
 	},
-	column1: {
-		marginRight: "20px",
-	},
 	text1: {
-		fontSize: "100px",
+		fontSize: "5vw",
 		fontWeight: "40",
 	},
 	text2: {
-		fontSize: "100px",
+		fontSize: "6vw",
 		fontWeight: "650",
 		color: colors.themeColor,
 	},

@@ -21,7 +21,8 @@ export default function About() {
 
 const styles = {
 	container: {
-		padding: "0px 2vw 0px 2vw",
+		padding: "0vw 2vw 0vw 2vw",
 		fontSize: 23,
+		textAlign: "center",
 	},
 };

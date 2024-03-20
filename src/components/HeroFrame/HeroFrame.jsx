@@ -1,5 +1,4 @@
 import React from "react";
-import colors from "../../config/colors";
 import "./HeroFrame.css";
 import Button from "../Button/Button";
 import MediaIcon from "../MediaIcon/MediaIcon";
@@ -12,7 +11,6 @@ export default function HeroFrame() {
 				style={{
 					display: "flex",
 					flexDirection: "column",
-					// justifyContent: "center",
 					alignItems: "center",
 				}}
 			>
@@ -22,9 +20,9 @@ export default function HeroFrame() {
 				</div>
 				<Button
 					text={"Know More"}
-					size="40px"
-					fontSize={"1vw"}
-					marginTop={"8vh"}
+					size="4vw"
+					fontSize={"1.5vw"}
+					marginTop={"2vw"}
 					maxWidth={"6vw"}
 				/>
 			</div>
@@ -35,7 +33,8 @@ export default function HeroFrame() {
 const styles = {
 	container: {
 		// marginTop: "8vh",
-		height: "86vh",
+		margin: "auto 0px auto 0px",
+		height: "100vh",
 		maxWidth: "100vw",
 
 		display: "grid",

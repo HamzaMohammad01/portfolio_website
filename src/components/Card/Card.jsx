@@ -17,6 +17,7 @@ export default function Card({
 		<div>
 			<div
 				style={{
+					padding: "1.25vw",
 					alignItems: "center",
 					justifyContent: "center",
 					display: "flex",
@@ -43,8 +44,8 @@ export default function Card({
 				{description && (
 					<div
 						style={{
-							fontSize: "23px",
-							marginTop: "20px",
+							fontSize: "1.25vw",
+							marginTop: "1vw",
 							textAlign: "center",
 						}}
 					>
@@ -54,12 +55,11 @@ export default function Card({
 				<Button
 					text={"Know More"}
 					marginRight="0px"
-					marginTop={"30px"}
+					marginTop={"1.25vw"}
 					size="3vw"
+					fontSize="1.25vmax"
 				/>
 			</div>
 		</div>
 	);
 }
-
-const styles = {};

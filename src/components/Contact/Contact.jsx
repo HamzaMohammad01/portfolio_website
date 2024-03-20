@@ -30,12 +30,15 @@ export default function Contact() {
 					name="username"
 					value={inputs.username || ""}
 					onChange={handleChange}
+					placeholder={"Name"}
 				/>
 				<TextInput
 					type="text"
 					name="username"
 					value={inputs.username || ""}
 					onChange={handleChange}
+					placeholder={"Email"}
+					marginTop={"1.5vw"}
 				/>
 				<TextInput
 					type="text"
@@ -43,20 +46,23 @@ export default function Contact() {
 					value={inputs.age || ""}
 					multiline
 					onChange={handleChange}
+					placeholder={"Description"}
+					marginTop={"1.5vw"}
 				/>
 				<Button
 					text={"Send"}
 					borderColor={colors.white}
 					backgroundColor={colors.themeColor}
 					type={"submit"}
+					marginTop={"2vw"}
 				/>
 			</form>
-			<MediaIcon
+			{/* <MediaIcon
 				marginLeft={"auto"}
 				marginTop={"auto"}
 				marginBottom={"auto"}
-				marginRight={"30px"}
-			/>
+				marginRight={"1.5vw"}
+			/> */}
 		</div>
 	);
 }
@@ -74,11 +80,11 @@ const styles = {
 		margin: "auto",
 	},
 	text1: {
-		fontSize: "100px",
+		fontSize: "7vw",
 		fontWeight: "100",
 	},
 	text2: {
-		fontSize: "125px",
+		fontSize: "9vw",
 		color: colors.themeColor,
 		fontWeight: "650",
 	},

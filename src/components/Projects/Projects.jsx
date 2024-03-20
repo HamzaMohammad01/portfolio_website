@@ -60,18 +60,18 @@ const styles = {
 		margin: "auto",
 	},
 	text1: {
-		fontSize: "75px",
-		marginRight: "10px",
+		fontSize: "4.5vw",
+		marginRight: "0.75vw",
 		fontWeight: "100",
 	},
 	text2: {
-		fontSize: "100px",
+		fontSize: "6vw",
 		color: colors.themeColor,
 		fontWeight: "650",
 	},
 	sliderContainer: {
 		display: "flex",
-		marginTop: "30px",
+		marginTop: "2vw",
 		alignItems: "center",
 		justifyContent: "space-around",
 	},

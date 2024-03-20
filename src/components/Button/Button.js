@@ -7,10 +7,10 @@ export default function Button({
 	backgroundColor,
 	marginRight = "2vw",
 	marginLeft,
-	size = "30px",
+	size = "2vw",
 	marginTop,
 	marginBotton,
-	fontSize,
+	fontSize = "1em",
 	maxWidth,
 	otherProps,
 }) {
@@ -20,6 +20,9 @@ export default function Button({
 				border: `2px solid ${borderColor}`,
 				borderRadius: "20px",
 				backgroundColor: backgroundColor,
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
 				padding: `10px ${size} 10px ${size}`,
 				marginRight: marginRight,
 				fontSize: fontSize,
@@ -28,6 +31,7 @@ export default function Button({
 				marginBottom: marginBotton,
 				maxWidth: maxWidth,
 				fontWeight: "700",
+				textWrap: "nowrap",
 			}}
 			{...otherProps}
 		>

@@ -27,9 +27,11 @@ const styles = {
 	container: {
 		display: "flex",
 		alignItems: "center",
-		justifyContent: "space-between",
 		fontWeight: "800",
 		maxheight: "20vh",
+		position: "absolute",
+		width: "100%",
+		justifyContent: "space-between",
 	},
 	rightContainer: {
 		flex: 1,
@@ -42,7 +44,7 @@ const styles = {
 	},
 	navContainer: {
 		display: "flex",
-		justify: "flex-end",
+		justifyContent: "flex-end",
 		flex: 1,
 	},
 };

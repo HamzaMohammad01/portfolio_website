@@ -12,7 +12,7 @@ export default function TextInput({
 	marginBottom,
 	marginRight,
 	marginLeft,
-	otherProps,
+	placeholder,
 }) {
 	return !multiline ? (
 		<input
@@ -20,7 +20,7 @@ export default function TextInput({
 			name={name}
 			value={value || ""}
 			onChange={onChange}
-			{...otherProps}
+			placeholder={placeholder}
 			style={{
 				backgroundColor: colors.black,
 				padding: "10px",
@@ -43,7 +43,8 @@ export default function TextInput({
 			name={name}
 			value={value || ""}
 			onChange={onChange}
-			{...otherProps}
+			placeholder={placeholder}
+			maxLength={2000}
 			style={{
 				backgroundColor: colors.black,
 				padding: "10px",
