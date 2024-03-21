@@ -24,7 +24,7 @@ const styles = {
 		marginTop: "100px",
 		borderRadius: "10vmin  10vmin 0px 0px",
 		TextAlign: "center",
-		fontSize: "5vmin",
+		fontSize: "2.5vmax",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
