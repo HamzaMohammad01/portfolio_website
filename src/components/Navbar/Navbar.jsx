@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import colors from "../../config/colors";
 import Button from "../Button/Button";
+import { FaReact } from "react-icons/fa";
+import "./Navbar.css";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 export default function Navbar() {
+	const navBar = useRef();
 	return (
 		<div style={styles.container}>
 			<div style={styles.rightContainer}>
-				<div style={styles.logoBorder}></div>
+				<div style={styles.logoBorder} id="logoBorder">
+					<FaReact style={styles.logo} />
+				</div>
 			</div>
-			<div style={styles.navContainer}>
+			<HamburgerMenu />
+			<div style={styles.navContainer} id={"navbar"} ref={navBar}>
 				<Button text={"Home"} />
 				<Button text={"Skills"} />
 				<Button text={"Projects"} />
@@ -30,7 +37,7 @@ const styles = {
 		fontWeight: "800",
 		maxheight: "20vh",
 		position: "absolute",
-		width: "100%",
+		width: "97%",
 		justifyContent: "space-between",
 	},
 	rightContainer: {
@@ -39,8 +46,17 @@ const styles = {
 	logoBorder: {
 		border: `2px solid ${colors.themeColor}`,
 		borderRadius: "100px",
-		height: "125px",
-		width: "125px",
+		height: "max-content",
+		width: "max-content",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		padding: "10px",
+	},
+	logo: {
+		color: colors.themeColor,
+		height: "5vmax",
+		width: "5vmax",
 	},
 	navContainer: {
 		display: "flex",

@@ -4,13 +4,18 @@ import colors from "../../config/colors";
 import Button from "../Button/Button";
 import { BiLogoMongodb } from "react-icons/bi";
 import { FaFigma, FaNodeJs, FaMobileAlt } from "react-icons/fa";
+import "./Skills.css";
 
 export default function Skills() {
 	return (
-		<div style={styles.container}>
+		<div style={styles.container} id="skillsContainer">
 			<div style={styles.column1}>
-				<div style={styles.text1}>My</div>
-				<div style={styles.text2}>Skills</div>
+				<div style={styles.text1} id="text">
+					My
+				</div>
+				<div style={styles.text2} id="text">
+					Skills
+				</div>
 				<Button
 					text={"Download CV"}
 					backgroundColor={colors.themeColor}

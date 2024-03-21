@@ -42,7 +42,7 @@ const styles = {
 		alignItems: "center",
 	},
 	text1: {
-		fontSize: "4vw",
+		fontSize: "4vmax",
 		fontWeight: "800",
 	},
 };
