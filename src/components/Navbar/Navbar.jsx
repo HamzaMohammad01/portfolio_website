@@ -45,7 +45,7 @@ const styles = {
 	},
 	logoBorder: {
 		border: `2px solid ${colors.themeColor}`,
-		borderRadius: "100px",
+		borderRadius: "50%",
 		height: "max-content",
 		width: "max-content",
 		display: "flex",

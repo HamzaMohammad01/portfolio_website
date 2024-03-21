@@ -8,6 +8,7 @@ export default function MediaIcon({
 	marginBottom,
 	marginRight,
 	display = "block",
+	iconSize = "3.5vmax",
 	color = colors.themeColor,
 	spaceBetween,
 }) {
@@ -15,17 +16,17 @@ export default function MediaIcon({
 		<div style={{ marginLeft, marginTop, marginBottom, marginRight }}>
 			<FaInstagram
 				color={color}
-				size={"4vw"}
+				size={iconSize}
 				display={display}
 				style={{ marginRight: spaceBetween }}
 			/>
 			<FaYoutube
 				color={color}
-				size={"4vw"}
+				size={iconSize}
 				display={display}
 				style={{ marginRight: spaceBetween }}
 			/>
-			<FaWhatsapp color={color} size={"4vw"} display={display} />
+			<FaWhatsapp color={color} size={iconSize} display={display} />
 		</div>
 	);
 }

@@ -2,64 +2,66 @@ import React from "react";
 import colors from "../../config/colors";
 import { FaReact } from "react-icons/fa";
 import Button from "../Button/Button";
+import "./Card.css";
 
 export default function Card({
 	text,
-	iconComponent = <FaReact size={"8vw"} color={colors.themeColor} />,
+	iconComponent = <FaReact size={"8vmax"} color={colors.themeColor} />,
 	marginTop,
 	marginBottom,
 	marginLeft,
 	marginRight,
-	fontSize = "2vw",
+	fontSize = "2.5vmax",
 	description,
+	className,
 }) {
 	return (
-		<div>
+		<div
+			style={{
+				padding: "5vw 3vw 5vw 3vw ",
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
+				flexDirection: "column",
+				border: `2px solid ${colors.themeColor}`,
+				height: "fit-content",
+				width: "fit-content",
+				borderRadius: "5vmin",
+				maxWidth: "50vw",
+				marginTop: marginTop,
+				marginBottom: marginBottom,
+				marginRight: marginRight,
+				marginLeft: marginLeft,
+			}}
+			className={className}
+		>
+			{iconComponent}
 			<div
 				style={{
-					padding: "1.25vw",
-					alignItems: "center",
-					justifyContent: "center",
-					display: "flex",
-					flexDirection: "column",
-					border: `2px solid ${colors.themeColor}`,
-					height: "23vw",
-					width: "16vw",
-					borderRadius: "30px",
-					marginTop: marginTop,
-					marginBottom: marginBottom,
-					marginRight: marginRight,
-					marginLeft: marginLeft,
+					fontSize: fontSize,
+					marginTop: "20px",
 				}}
 			>
-				{iconComponent}
+				{text}
+			</div>
+			{description && (
 				<div
 					style={{
-						fontSize: fontSize,
-						marginTop: "20px",
+						fontSize: "1.75vmax",
+						marginTop: "1vw",
+						textAlign: "center",
 					}}
 				>
-					{text}
+					{description}
 				</div>
-				{description && (
-					<div
-						style={{
-							fontSize: "1.25vw",
-							marginTop: "1vw",
-							textAlign: "center",
-						}}
-					>
-						{description}
-					</div>
-				)}
-				<Button
-					text={"Know More"}
-					marginRight="0px"
-					marginTop={"1.25vw"}
-					size="3vw"
-					fontSize="1.25vmax"
-				/>
-			</div>
+			)}
+			<Button
+				text={"Know More"}
+				marginRight="0px"
+				marginTop={"1.25vmax"}
+				size="3vw"
+				fontSize="1.5vmax"
+			/>
 		</div>
 	);
 }

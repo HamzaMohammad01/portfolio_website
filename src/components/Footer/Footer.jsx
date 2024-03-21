@@ -10,7 +10,8 @@ export default function Footer() {
 				display="relative"
 				color="white"
 				marginTop={"30px"}
-				spaceBetween={"20px"}
+				iconSize="4vmax"
+				spaceBetween={"1vmax"}
 			/>
 		</div>
 	);
@@ -19,11 +20,11 @@ export default function Footer() {
 const styles = {
 	container: {
 		backgroundColor: colors.themeColor,
-		height: "20vh",
+		height: "15vmax",
 		marginTop: "100px",
-		borderRadius: "100px  100px 0px 0px",
+		borderRadius: "10vmin  10vmin 0px 0px",
 		TextAlign: "center",
-		fontSize: "25px",
+		fontSize: "5vmin",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",

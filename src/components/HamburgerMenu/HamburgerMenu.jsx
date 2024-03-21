@@ -20,7 +20,7 @@ const styles = {
 		cursor: "pointer",
 		border: `2px solid ${colors.themeColor}`,
 		padding: "9px",
-		borderRadius: "15px",
+		borderRadius: "2vmin",
 		transition: "all 0.25s ease",
 		display: "none",
 	},
@@ -29,7 +29,7 @@ const styles = {
 		height: "5px",
 		width: "25px",
 		backgroundColor: colors.themeColor,
-		borderRadius: "10px",
+		borderRadius: "1vmin",
 		marginBottom: "2px",
 	},
 };

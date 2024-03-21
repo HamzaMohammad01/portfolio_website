@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../Card/Card";
 import colors from "../../config/colors";
 import Button from "../Button/Button";
@@ -7,9 +7,22 @@ import { FaFigma, FaNodeJs, FaMobileAlt } from "react-icons/fa";
 import "./Skills.css";
 
 export default function Skills() {
+	let [screen, setScreen] = useState({
+		height: window.screen.height,
+		width: window.screen.width,
+	});
+
+	window.addEventListener("", (e) => {
+		let myScreen = { ...screen };
+		myScreen = { height: window.screen.height, width: window.screen.width };
+		setScreen(myScreen);
+		console.log(screen);
+		e.stopPropagation();
+	});
+
 	return (
 		<div style={styles.container} id="skillsContainer">
-			<div style={styles.column1}>
+			<div>
 				<div style={styles.text1} id="text">
 					My
 				</div>
@@ -22,42 +35,46 @@ export default function Skills() {
 					borderColor={colors.white}
 					maxWidth={"10vw"}
 					marginTop={"10px"}
+					size="3.25vmax"
+					marginBotton={"10vmin"}
 					fontSize="1.25vmax"
 				/>
-				<Card
-					text={"React"}
-					marginTop={"10vw"}
-					iconComponent={
-						<FaFigma size={"8vw"} color={colors.themeColor} />
-					}
-				/>
 			</div>
-			<div style={styles.column2}>
-				<Card
-					text={"MongoDb"}
-					marginTop={"8vw"}
-					iconComponent={
-						<BiLogoMongodb size={"8vw"} color={colors.themeColor} />
-					}
-				/>
-				<Card
-					text={"MongoDb"}
-					marginTop={"5vw"}
-					iconComponent={
-						<FaMobileAlt size={"8vw"} color={colors.themeColor} />
-					}
-				/>
-			</div>
-			<div style={styles.column3}>
-				<Card text={"MongoDb"} />
-				<Card
-					text={"MongoDb"}
-					marginTop={"5vw"}
-					iconComponent={
-						<FaNodeJs size={"8vw"} color={colors.themeColor} />
-					}
-				/>
-			</div>
+			<Card
+				text={"MongoDb"}
+				marginTop={"8vw"}
+				iconComponent={
+					<BiLogoMongodb size={"8vmax"} color={colors.themeColor} />
+				}
+				className={"rightColSkillCards allSkillCards"}
+			/>
+
+			<Card
+				text={"React"}
+				className={"leftColSkillCards allSkillCards"}
+			/>
+			<Card
+				text={"Figma"}
+				iconComponent={
+					<FaFigma size={"8vmax"} color={colors.themeColor} />
+				}
+				className={"rightColSkillCards allSkillCards"}
+			/>
+			<Card
+				text={"React Native"}
+				marginTop={"8vw"}
+				iconComponent={
+					<FaMobileAlt size={"8vmax"} color={colors.themeColor} />
+				}
+				className={"leftColSkillCards allSkillCards"}
+			/>
+			<Card
+				text={"NodeJS"}
+				iconComponent={
+					<FaNodeJs size={"8vmax"} color={colors.themeColor} />
+				}
+				className={"rightColSkillCards allSkillCards "}
+			/>
 		</div>
 	);
 }
@@ -66,8 +83,11 @@ const styles = {
 	container: {
 		marginTop: "50px",
 		display: "grid",
-		gridTemplateColumns: "auto auto auto auto auto",
+		width: "70vw",
+		gridTemplateColumns: "auto auto auto",
 		paddingLeft: "2vw",
+		columnGap: "4vmax",
+		// justifyContent: "center",
 	},
 	text1: {
 		fontSize: "5vw",

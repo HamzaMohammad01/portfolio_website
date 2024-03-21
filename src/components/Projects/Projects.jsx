@@ -1,7 +1,8 @@
 import React from "react";
 import colors from "../../config/colors";
 import Card from "../Card/Card";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import "./Projects.css";
+import Carousal from "../Carousal/Carousal";
 
 const projects = [
 	{
@@ -10,40 +11,28 @@ const projects = [
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
 		uri: "",
 	},
-	{
-		name: "Factor Calculator",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
-	},
-	{
-		name: "Sleepy Time",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
-	},
-	{
-		name: "Sleepy Time",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
-	},
+	// {
+	// 	name: "Factor Calculator",
+	// 	description:
+	// 		"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+	// 	uri: "",
+	// },
+	// {
+	// 	name: "Sleepy Time",
+	// 	description:
+	// 		"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+	// 	uri: "",
+	// },
 ];
 
 export default function Projects() {
 	return (
 		<div style={styles.container}>
-			<div style={styles.textContainer}>
+			<div style={styles.textContainer} className="textContainer">
 				<div style={styles.text1}>Recent</div>
 				<div style={styles.text2}>Projects</div>
 			</div>
-			<div style={styles.sliderContainer}>
-				<FaChevronLeft size={"5vw"} color={colors.themeColor} />
-				{projects.map((e) => (
-					<Card text={e.name} description={e.description} />
-				))}
-				<FaChevronRight size={"5vw"} color={colors.themeColor} />
-			</div>
+			<Carousal array={projects} className={"carousal"} />
 		</div>
 	);
 }
@@ -60,19 +49,13 @@ const styles = {
 		margin: "auto",
 	},
 	text1: {
-		fontSize: "4.5vw",
-		marginRight: "0.75vw",
+		fontSize: "4.5vmax",
+		marginRight: "0.75vmax",
 		fontWeight: "100",
 	},
 	text2: {
-		fontSize: "6vw",
+		fontSize: "5.5vmax",
 		color: colors.themeColor,
 		fontWeight: "650",
-	},
-	sliderContainer: {
-		display: "flex",
-		marginTop: "2vw",
-		alignItems: "center",
-		justifyContent: "space-around",
 	},
 };

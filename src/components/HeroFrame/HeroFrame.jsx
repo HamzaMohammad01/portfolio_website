@@ -20,10 +20,9 @@ export default function HeroFrame() {
 				</div>
 				<Button
 					text={"Know More"}
-					size="4vw"
-					fontSize={"1.5vw"}
+					size="2vw"
+					fontSize={"1.35vmax"}
 					marginTop={"2vw"}
-					maxWidth={"6vw"}
 				/>
 			</div>
 		</div>

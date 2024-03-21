@@ -3,6 +3,7 @@ import colors from "../../config/colors";
 import TextInput from "../TextInput/TextInput";
 import MediaIcon from "../MediaIcon/MediaIcon";
 import Button from "../Button/Button";
+import "./Contact.css";
 
 export default function Contact() {
 	const [inputs, setInputs] = useState({});
@@ -18,13 +19,19 @@ export default function Contact() {
 		alert(inputs);
 	};
 	return (
-		<div style={styles.container}>
-			<div style={styles.textContainer}>
-				<div style={styles.text1}>Get</div>
-				<div style={styles.text1}>In</div>
-				<div style={styles.text2}>Touch</div>
+		<div style={styles.container} className="container">
+			<div style={styles.textContainer} className="textContainer">
+				<div style={styles.text1} className="text1">
+					Get
+				</div>
+				<div style={styles.text1} className="text1">
+					In
+				</div>
+				<div style={styles.text2} className="text2">
+					Touch
+				</div>
 			</div>
-			<form onSubmit={handleSubmit} style={styles.form}>
+			<form onSubmit={handleSubmit} style={styles.form} className="form">
 				<TextInput
 					type="text"
 					name="username"
@@ -54,6 +61,7 @@ export default function Contact() {
 					borderColor={colors.white}
 					backgroundColor={colors.themeColor}
 					type={"submit"}
+					size="5vmax"
 					marginTop={"2vw"}
 				/>
 			</form>
@@ -71,7 +79,7 @@ const styles = {
 	container: {
 		marginTop: "100px",
 		display: "grid",
-		gridTemplateColumns: "auto auto auto",
+		gridTemplateColumns: "auto auto",
 	},
 	textContainer: {
 		display: "flex",
@@ -80,11 +88,12 @@ const styles = {
 		margin: "auto",
 	},
 	text1: {
-		fontSize: "7vw",
+		fontSize: "5vmax",
 		fontWeight: "100",
 	},
 	text2: {
-		fontSize: "9vw",
+		marginTop: "-2vmax",
+		fontSize: "7vmax",
 		color: colors.themeColor,
 		fontWeight: "650",
 	},
@@ -92,6 +101,6 @@ const styles = {
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
-		justifyContent: "space-around",
+		justifyContent: "center",
 	},
 };
