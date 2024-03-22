@@ -33,7 +33,7 @@ const styles = {
 	},
 	homePage: {
 		height: "100vh",
-		width: "97vw",
+		width: "95vw",
 		display: "flex",
 		flexDirection: "column",
 	},

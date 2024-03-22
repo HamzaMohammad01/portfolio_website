@@ -50,7 +50,6 @@ export default function Navbar() {
 
 const styles = {
 	container: {
-		overflow: "hidden",
 		display: "flex",
 		alignItems: "center",
 		fontWeight: "800",
@@ -60,13 +59,14 @@ const styles = {
 		justifyContent: "space-between",
 	},
 	rightContainer: {
+		overflow: "visible",
 		flex: 1,
 	},
 	logoBorder: {
 		border: `2px solid ${colors.themeColor}`,
 		borderRadius: "50%",
-		left: "0px",
-		top: "0px",
+		left: "5px",
+		top: "5px",
 		position: "absolute",
 		height: "max-content",
 		width: "max-content",

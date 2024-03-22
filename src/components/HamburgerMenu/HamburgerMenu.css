@@ -3,16 +3,29 @@
 		display: inline-block !important;
 	}
 }
+#lines {
+	transition: transform 0.5s ease;
+}
 
 .linesX {
 	transform: rotateY(180deg);
 }
 
+.hamX {
+	box-shadow: 0px 0px 50px 4px #00a3ff;
+}
+
 .oneX {
 	width: 20px !important;
 	transform: rotateZ(-40deg);
+	box-shadow: 0px 0px 50px 4px #00a3ff;
+}
+
+.twoX {
+	box-shadow: 0px 0px 50px 4px #00a3ff;
 }
 .threeX {
 	width: 20px !important;
 	transform: rotateZ(40deg);
+	box-shadow: 0px 0px 50px 4px #00a3ff;
 }
