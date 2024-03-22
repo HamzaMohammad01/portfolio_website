@@ -1,5 +1,18 @@
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 650px) {
 	#ham {
 		display: inline-block !important;
 	}
+}
+
+.linesX {
+	transform: rotateY(180deg);
+}
+
+.oneX {
+	width: 20px !important;
+	transform: rotateZ(-40deg);
+}
+.threeX {
+	width: 20px !important;
+	transform: rotateZ(40deg);
 }

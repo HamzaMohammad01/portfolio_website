@@ -1,5 +1,6 @@
 import React from "react";
 import colors from "../../config/colors";
+import "./Button.css";
 
 export default function Button({
 	text,
@@ -11,7 +12,9 @@ export default function Button({
 	marginTop,
 	marginBotton,
 	fontSize = "1em",
+	width = "fit-content",
 	maxWidth,
+	className,
 	otherProps,
 }) {
 	return (
@@ -31,11 +34,12 @@ export default function Button({
 				marginBottom: marginBotton,
 				maxWidth: maxWidth,
 				height: "fit-content",
-				width: "fit-content",
+				width,
 				fontWeight: "700",
 				textWrap: "nowrap",
 			}}
 			{...otherProps}
+			className={`btn ${className}`}
 		>
 			{text}
 		</div>

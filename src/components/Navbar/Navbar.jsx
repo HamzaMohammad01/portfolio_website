@@ -6,25 +6,43 @@ import "./Navbar.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 
 export default function Navbar() {
+	const navList = ["Home", "Skills", "Projects", "Contact"];
 	const navBar = useRef();
 	return (
-		<div style={styles.container}>
-			<div style={styles.rightContainer}>
-				<div style={styles.logoBorder} id="logoBorder">
-					<FaReact style={styles.logo} />
+		<div style={styles.container} className="container">
+			<div style={styles.rightContainer} className="rightContainer">
+				<div
+					style={styles.logoBorder}
+					id="logoBorder"
+					className="logoBorder"
+				>
+					<FaReact style={styles.logo} className="logo" />
 				</div>
 			</div>
-			<HamburgerMenu />
-			<div style={styles.navContainer} id={"navbar"} ref={navBar}>
-				<Button text={"Home"} />
-				<Button text={"Skills"} />
-				<Button text={"Projects"} />
-				<Button text={"Contact"} />
-				<Button
-					text={"Hire Me!"}
-					backgroundColor={colors.themeColor}
-					borderColor={colors.white}
-				/>
+			<div className="hamBurgerContainer">
+				<HamburgerMenu navBarRef={navBar} />
+				<div
+					style={styles.navContainer}
+					id={"navbar"}
+					ref={navBar}
+					className="navContainer navTranslate"
+				>
+					{navList.map((e) => (
+						<Button
+							text={e}
+							key={e}
+							width="2vmin"
+							className={"navBtn"}
+						/>
+					))}
+					<Button
+						text={"Hire Me!"}
+						width="2vmax"
+						className={"navBtn"}
+						backgroundColor={colors.themeColor}
+						borderColor={colors.white}
+					/>
+				</div>
 			</div>
 		</div>
 	);
@@ -32,6 +50,7 @@ export default function Navbar() {
 
 const styles = {
 	container: {
+		overflow: "hidden",
 		display: "flex",
 		alignItems: "center",
 		fontWeight: "800",
@@ -46,6 +65,9 @@ const styles = {
 	logoBorder: {
 		border: `2px solid ${colors.themeColor}`,
 		borderRadius: "50%",
+		left: "0px",
+		top: "0px",
+		position: "absolute",
 		height: "max-content",
 		width: "max-content",
 		display: "flex",

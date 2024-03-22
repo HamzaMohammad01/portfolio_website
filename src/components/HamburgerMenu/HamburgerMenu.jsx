@@ -1,15 +1,23 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./HamburgerMenu.css";
 import colors from "../../config/colors";
 
 export default function HamburgerMenu({ navBarRef }) {
-	const hamMenu = useRef();
+	const handleHamburgerPress = () => {
+		console.log("clicked");
+		navBarRef.current.classList.toggle("navTranslate");
+	};
 	return (
-		<div class="ham" id="ham" style={styles.container} ref={hamMenu}>
-			<div class="lines" id="lines">
-				<div class="one" id="one" style={styles.bars}></div>
-				<div class="two" id="two" style={styles.bars}></div>
-				<div class="three" id="three" style={styles.bars}></div>
+		<div
+			class="ham"
+			id="ham"
+			style={styles.container}
+			onClick={handleHamburgerPress}
+		>
+			<div className="lines" id="lines">
+				<div className="one" id="one" style={styles.bars}></div>
+				<div className="two" id="two" style={styles.bars}></div>
+				<div className="three" id="three" style={styles.bars}></div>
 			</div>
 		</div>
 	);
