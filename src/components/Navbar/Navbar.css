@@ -2,11 +2,13 @@
 	.container {
 		align-items: flex-end !important;
 		overflow: hidden;
+		padding-bottom: 0.75em;
 	}
 	#navbar {
 		flex-direction: column;
 		justify-content: space-between;
 		transition: all 0.5s ease;
+		height: 100%;
 	}
 	.navTranslate {
 		transform: translateX(50vmax);
