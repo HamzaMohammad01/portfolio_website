@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import colors from "../../config/colors";
 import TextInput from "../TextInput/TextInput";
-import MediaIcon from "../MediaIcon/MediaIcon";
 import Button from "../Button/Button";
 import "./Contact.css";
 
-export default function Contact() {
+export default function Contact({ myRef }) {
 	const [inputs, setInputs] = useState({});
 
 	const handleChange = (event) => {
@@ -19,7 +18,7 @@ export default function Contact() {
 		alert(inputs);
 	};
 	return (
-		<div style={styles.container} className="container">
+		<div style={styles.container} className="container" ref={myRef}>
 			<div style={styles.textContainer} className="textContainer">
 				<div style={styles.text1} className="text1">
 					Get

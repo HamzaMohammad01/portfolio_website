@@ -4,15 +4,19 @@ import Button from "../Button/Button";
 import { FaReact } from "react-icons/fa";
 import "./Navbar.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ refs }) {
 	const navList = [
-		{ name: "Home", href: "/" },
-		{ name: "Skills", href: "/skills" },
-		{ name: "Projects", href: "/projects" },
-		{ name: "Contact", href: "/contact" },
+		{ name: "Home", href: refs.homeRef },
+		{ name: "Skills", href: refs.skillsRef },
+		{ name: "Projects", href: refs.projectsRef },
+		{ name: "Contact", href: refs.contactRef },
 	];
+
+	const handleOnClick = (ref) => {
+		window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
+	};
+
 	const navBar = useRef();
 	return (
 		<div style={styles.container} className="container">
@@ -39,6 +43,7 @@ export default function Navbar() {
 							key={e.name}
 							width="2vmin"
 							className={"navBtn"}
+							onClick={() => handleOnClick(e.href)}
 						/>
 					))}
 					<Button

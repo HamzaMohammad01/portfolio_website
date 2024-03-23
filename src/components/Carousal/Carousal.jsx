@@ -3,7 +3,7 @@ import {
 	FaChevronLeft,
 	FaChevronRight,
 	FaDotCircle,
-	FaRegDotCircle,
+	// FaRegDotCircle,
 } from "react-icons/fa";
 import colors from "../../config/colors";
 import Card from "../Card/Card";

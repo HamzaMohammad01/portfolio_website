@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../Card/Card";
 import colors from "../../config/colors";
 import Button from "../Button/Button";
@@ -6,22 +6,9 @@ import { BiLogoMongodb } from "react-icons/bi";
 import { FaFigma, FaNodeJs, FaMobileAlt } from "react-icons/fa";
 import "./Skills.css";
 
-export default function Skills() {
-	let [screen, setScreen] = useState({
-		height: window.screen.height,
-		width: window.screen.width,
-	});
-
-	window.addEventListener("", (e) => {
-		let myScreen = { ...screen };
-		myScreen = { height: window.screen.height, width: window.screen.width };
-		setScreen(myScreen);
-		console.log(screen);
-		e.stopPropagation();
-	});
-
+export default function Skills({ myRef }) {
 	return (
-		<div style={styles.container} id="skillsContainer">
+		<div style={styles.container} id="skillsContainer" ref={myRef}>
 			<div>
 				<div style={styles.text1} id="text">
 					My

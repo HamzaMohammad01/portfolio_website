@@ -30,7 +30,3 @@ export default function MediaIcon({
 		</div>
 	);
 }
-
-const styles = {
-	container: {},
-};

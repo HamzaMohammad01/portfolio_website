@@ -15,6 +15,7 @@ export default function Button({
 	width = "fit-content",
 	maxWidth,
 	className,
+	onClick,
 	otherProps,
 }) {
 	return (
@@ -40,6 +41,7 @@ export default function Button({
 			}}
 			{...otherProps}
 			className={`btn ${className}`}
+			onClick={onClick}
 		>
 			{text}
 		</div>

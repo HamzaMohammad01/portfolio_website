@@ -1,6 +1,5 @@
 import React from "react";
 import colors from "../../config/colors";
-import Card from "../Card/Card";
 import "./Projects.css";
 import Carousal from "../Carousal/Carousal";
 
@@ -25,9 +24,9 @@ const projects = [
 	// },
 ];
 
-export default function Projects() {
+export default function Projects({ myRef }) {
 	return (
-		<div style={styles.container}>
+		<div style={styles.container} ref={myRef}>
 			<div style={styles.textContainer} className="textContainer">
 				<div style={styles.text1}>Recent</div>
 				<div style={styles.text2}>Projects</div>

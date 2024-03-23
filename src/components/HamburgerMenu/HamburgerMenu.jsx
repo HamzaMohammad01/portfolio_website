@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import "./HamburgerMenu.css";
 import colors from "../../config/colors";
 
@@ -19,9 +19,6 @@ export default function HamburgerMenu({ navBarRef }) {
 		three.current.classList.toggle("threeX");
 	};
 
-	const handleMouseOver = () => {
-		console.log("MouseOver");
-	};
 	return (
 		<div
 			class="ham"
