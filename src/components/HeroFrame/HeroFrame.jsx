@@ -3,7 +3,10 @@ import "./HeroFrame.css";
 import Button from "../Button/Button";
 import MediaIcon from "../MediaIcon/MediaIcon";
 
-export default function HeroFrame() {
+export default function HeroFrame({ refs }) {
+	const handleOnClick = (ref) => {
+		window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
+	};
 	return (
 		<div style={styles.container}>
 			<MediaIcon />
@@ -23,6 +26,7 @@ export default function HeroFrame() {
 					size="2vw"
 					fontSize={"1.35vmax"}
 					marginTop={"2vw"}
+					onClick={() => handleOnClick(refs.aboutRef)}
 				/>
 			</div>
 		</div>
@@ -31,7 +35,6 @@ export default function HeroFrame() {
 
 const styles = {
 	container: {
-		// marginTop: "8vh",
 		margin: "auto 0px auto 0px",
 		height: "100vh",
 		maxWidth: "100vw",

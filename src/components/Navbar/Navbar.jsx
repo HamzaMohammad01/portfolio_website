@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import { FaReact } from "react-icons/fa";
 import "./Navbar.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import { TbSquareRoundedLetterH, TbHexagonLetterH } from "react-icons/tb";
 
 export default function Navbar({ refs }) {
 	const navList = [
@@ -21,13 +22,18 @@ export default function Navbar({ refs }) {
 	return (
 		<div style={styles.container} className="container">
 			<div style={styles.rightContainer} className="rightContainer">
-				<div
+				{/* <div
 					style={styles.logoBorder}
 					id="logoBorder"
 					className="logoBorder"
-				>
-					<FaReact style={styles.logo} className="logo" />
-				</div>
+					onClick={() => handleOnClick(refs.homeRef)}
+				> */}
+				<TbHexagonLetterH
+					style={styles.logo}
+					className="logo"
+					onClick={() => handleOnClick(refs.homeRef)}
+				/>
+				{/* </div> */}
 			</div>
 			<div className="hamBurgerContainer">
 				<HamburgerMenu navBarRef={navBar} />
@@ -52,6 +58,7 @@ export default function Navbar({ refs }) {
 						className={"navBtn"}
 						backgroundColor={colors.themeColor}
 						borderColor={colors.white}
+						onClick={() => handleOnClick(refs.contactRef)}
 					/>
 				</div>
 			</div>
@@ -73,23 +80,25 @@ const styles = {
 		overflow: "visible",
 		flex: 1,
 	},
-	logoBorder: {
-		border: `2px solid ${colors.themeColor}`,
-		borderRadius: "50%",
-		left: "5px",
-		top: "5px",
-		position: "absolute",
-		height: "max-content",
-		width: "max-content",
-		display: "flex",
-		alignItems: "center",
-		justifyContent: "center",
-		padding: "10px",
-	},
+	// logoBorder: {
+	// 	border: `2px solid ${colors.themeColor}`,
+	// 	cursor: "pointer",
+	// 	borderRadius: "50%",
+	// 	left: "5px",
+	// 	top: "5px",
+	// 	position: "absolute",
+	// 	height: "max-content",
+	// 	width: "max-content",
+	// 	display: "flex",
+	// 	alignItems: "center",
+	// 	justifyContent: "center",
+	// 	padding: "10px",
+	// },
 	logo: {
 		color: colors.themeColor,
-		height: "5vmax",
-		width: "5vmax",
+		cursor: "pointer",
+		height: "12vmin",
+		width: "12vmin",
 	},
 	navContainer: {
 		display: "flex",

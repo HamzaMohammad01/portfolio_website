@@ -25,6 +25,7 @@ export default function Skills({ myRef }) {
 					size="3.25vmax"
 					marginBotton={"10vmin"}
 					fontSize="1.25vmax"
+					className={"responsive"}
 				/>
 			</div>
 			<Card

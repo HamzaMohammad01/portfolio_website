@@ -30,7 +30,12 @@ export default function Contact({ myRef }) {
 					Touch
 				</div>
 			</div>
-			<form onSubmit={handleSubmit} style={styles.form} className="form">
+			<form
+				action="https://formsubmit.co/e0b82004d939376ccefba54ffaad9340"
+				method="POST"
+				className="form"
+				style={styles.form}
+			>
 				<TextInput
 					type="text"
 					name="username"
@@ -39,17 +44,17 @@ export default function Contact({ myRef }) {
 					placeholder={"Name"}
 				/>
 				<TextInput
-					type="text"
-					name="username"
-					value={inputs.username || ""}
+					type="email"
+					name="email"
+					value={inputs.email || ""}
 					onChange={handleChange}
 					placeholder={"Email"}
 					marginTop={"1.5vw"}
 				/>
 				<TextInput
 					type="text"
-					name="age"
-					value={inputs.age || ""}
+					name="description"
+					value={inputs.description || ""}
 					multiline
 					onChange={handleChange}
 					placeholder={"Description"}
@@ -101,5 +106,6 @@ const styles = {
 		flexDirection: "column",
 		alignItems: "center",
 		justifyContent: "center",
+		width: "fit-content",
 	},
 };

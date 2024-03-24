@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function About() {
+export default function About({ myRef }) {
 	return (
-		<div style={styles.container}>
+		<div style={styles.container} ref={myRef}>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sequi
 			odio ducimus eum perferendis veniam sit hic iusto autem expedita a
 			aliquam, unde deserunt saepe nihil! Aliquam dolor fuga, ipsa soluta

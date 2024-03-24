@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import colors from "../../config/colors";
+import "./MediaIcon.css";
 
 export default function MediaIcon({
 	marginLeft,
@@ -11,6 +12,7 @@ export default function MediaIcon({
 	iconSize = "3.5vmax",
 	color = colors.themeColor,
 	spaceBetween,
+	className,
 }) {
 	return (
 		<div style={{ marginLeft, marginTop, marginBottom, marginRight }}>
@@ -19,14 +21,25 @@ export default function MediaIcon({
 				size={iconSize}
 				display={display}
 				style={{ marginRight: spaceBetween }}
+				className={`mediaIcon ${className}`}
 			/>
-			<FaYoutube
-				color={color}
-				size={iconSize}
-				display={display}
-				style={{ marginRight: spaceBetween }}
-			/>
-			<FaWhatsapp color={color} size={iconSize} display={display} />
+			<a href="https://www.youtube.com/@hamzamohammad01" target="_blank">
+				<FaYoutube
+					color={color}
+					size={iconSize}
+					display={display}
+					style={{ marginRight: spaceBetween }}
+					className={`mediaIcon ${className}`}
+				/>
+			</a>
+			<a href="//wa.me/+916388910725" target="_blank">
+				<FaWhatsapp
+					color={color}
+					size={iconSize}
+					display={display}
+					className={`mediaIcon ${className}`}
+				/>
+			</a>
 		</div>
 	);
 }

@@ -5,7 +5,7 @@ import "./Button.css";
 export default function Button({
 	text,
 	borderColor = colors.themeColor,
-	backgroundColor,
+	backgroundColor = colors.black,
 	marginRight = "2vw",
 	marginLeft,
 	size = "5vmin",
@@ -16,14 +16,16 @@ export default function Button({
 	maxWidth,
 	className,
 	onClick,
+	type,
 	otherProps,
 }) {
 	return (
-		<div
+		<button
 			style={{
 				border: `2px solid ${borderColor}`,
 				borderRadius: "25vmin",
 				backgroundColor: backgroundColor,
+				color: colors.white,
 				display: "flex",
 				alignItems: "center",
 				justifyContent: "center",
@@ -42,8 +44,9 @@ export default function Button({
 			{...otherProps}
 			className={`btn ${className}`}
 			onClick={onClick}
+			type={type}
 		>
 			{text}
-		</div>
+		</button>
 	);
 }

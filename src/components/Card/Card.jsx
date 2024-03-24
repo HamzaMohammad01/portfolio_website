@@ -11,27 +11,32 @@ export default function Card({
 	marginBottom,
 	marginLeft,
 	marginRight,
+	size = "3vw",
+	width = "fit-content",
+	height = "fit-content",
 	fontSize = "2.5vmax",
 	description,
 	className,
+	margin,
 }) {
 	return (
 		<div
 			style={{
-				padding: "5vw 3vw 5vw 3vw ",
+				padding: `5vw ${size} 5vw ${size} `,
 				display: "flex",
 				alignItems: "center",
 				justifyContent: "center",
 				flexDirection: "column",
 				border: `2px solid ${colors.themeColor}`,
-				height: "fit-content",
-				width: "fit-content",
+				height,
+				width,
 				borderRadius: "5vmin",
-				maxWidth: "50vw",
+				textAlign: "center",
 				marginTop: marginTop,
 				marginBottom: marginBottom,
 				marginRight: marginRight,
 				marginLeft: marginLeft,
+				margin,
 			}}
 			className={className}
 		>

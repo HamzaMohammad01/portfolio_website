@@ -18,14 +18,15 @@ export default function App() {
 		skillsRef: useRef(),
 		projectsRef: useRef(),
 		contactRef: useRef(),
+		aboutRef: useRef(),
 	};
 	return (
 		<div style={styles.container} ref={refs.homeRef}>
 			<div style={styles.homePage}>
 				<Navbar refs={refs} />
-				<HeroFrame />
+				<HeroFrame refs={refs} />
 			</div>
-			<About />
+			<About myRef={refs.aboutRef} />
 			<Skills myRef={refs.skillsRef} />
 			<Projects myRef={refs.projectsRef} />
 			<Contact myRef={refs.contactRef} />

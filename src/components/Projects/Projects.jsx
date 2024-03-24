@@ -1,7 +1,7 @@
 import React from "react";
 import colors from "../../config/colors";
 import "./Projects.css";
-import Carousal from "../Carousal/Carousal";
+import Card from "../Card/Card";
 
 const projects = [
 	{
@@ -10,18 +10,48 @@ const projects = [
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
 		uri: "",
 	},
-	// {
-	// 	name: "Factor Calculator",
-	// 	description:
-	// 		"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-	// 	uri: "",
-	// },
-	// {
-	// 	name: "Sleepy Time",
-	// 	description:
-	// 		"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-	// 	uri: "",
-	// },
+	{
+		name: "Salah Tim",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
+	{
+		name: "Salah Ti",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
+	{
+		name: "Salah Ti",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
+	{
+		name: "Salah Ti",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
+	{
+		name: "Salah Ti",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
+	{
+		name: "Salah Ti",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
+	{
+		name: "Salah Ti",
+		description:
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
+		uri: "",
+	},
 ];
 
 export default function Projects({ myRef }) {
@@ -31,7 +61,22 @@ export default function Projects({ myRef }) {
 				<div style={styles.text1}>Recent</div>
 				<div style={styles.text2}>Projects</div>
 			</div>
-			<Carousal array={projects} className={"carousal"} />
+			<swiper-container
+				style={styles.swiper}
+				navigation={true}
+				pagination={true}
+				pagination-clickable="true"
+			>
+				{projects.map((e) => (
+					<swiper-slide>
+						<Card
+							text={e.name}
+							description={e.description}
+							margin={"auto"}
+						/>
+					</swiper-slide>
+				))}
+			</swiper-container>
 		</div>
 	);
 }
@@ -40,7 +85,10 @@ const styles = {
 	container: {
 		marginTop: "100px",
 		display: "flex",
+		width: "100%",
 		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
 	},
 	textContainer: {
 		display: "flex",
@@ -56,5 +104,11 @@ const styles = {
 		fontSize: "5.5vmax",
 		color: colors.themeColor,
 		fontWeight: "650",
+	},
+	swiper: {
+		margin: "1vmax 0vmax 1vmax",
+		height: "100%",
+		width: "100%",
+		"--swiper-pagination-bullet-inactive-color": colors.white,
 	},
 };

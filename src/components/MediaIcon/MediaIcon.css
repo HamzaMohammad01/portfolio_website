@@ -1,0 +1,10 @@
+.mediaIcon {
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.mediaRowIcon:hover {
+	transform: translateY(0.5em) !important;
+}
+.mediaIcon:hover {
+	transform: translateX(0.5em);
+}

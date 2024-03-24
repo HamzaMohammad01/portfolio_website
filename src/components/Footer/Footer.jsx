@@ -12,6 +12,7 @@ export default function Footer() {
 				marginTop={"30px"}
 				iconSize="4vmax"
 				spaceBetween={"1vmax"}
+				className={"mediaRowIcon"}
 			/>
 		</div>
 	);
