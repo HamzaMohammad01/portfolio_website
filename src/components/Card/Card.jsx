@@ -64,13 +64,20 @@ export default function Card({
 				</div>
 			)}
 			{button && (
-				<Button
-					text={"Know More"}
-					marginRight="0px"
-					marginTop={"1.25vmax"}
-					size="3vw"
-					fontSize="1.5vmax"
-				/>
+				<a
+					href={button}
+					target="_blank"
+					style={{ textDecoration: "none" }}
+				>
+					<Button
+						text={"Know More"}
+						marginRight="0px"
+						marginTop={"1.25vmax"}
+						size="3vw"
+						fontSize="1.5vmax"
+						marginBotton={"2vmax"}
+					/>
+				</a>
 			)}
 		</div>
 	);

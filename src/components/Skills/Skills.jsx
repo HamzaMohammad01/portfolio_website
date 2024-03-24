@@ -33,13 +33,14 @@ export default function Skills({ myRef }) {
 				iconComponent={
 					<BiLogoMongodb size={"8vmax"} color={colors.themeColor} />
 				}
-				className={"rightColSkillCards allSkillCards"}
-				marginTop={"8vw"}
+				className={"rightColSkillCards allSkillCards mt"}
+				button={"https://www.mongodb.com/"}
 			/>
 
 			<Card
 				text={"React"}
 				className={"leftColSkillCards allSkillCards"}
+				button={"https://react.dev/"}
 			/>
 			<Card
 				text={"Figma"}
@@ -47,14 +48,15 @@ export default function Skills({ myRef }) {
 					<FaFigma size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"rightColSkillCards allSkillCards"}
+				button={"https://figma.com/"}
 			/>
 			<Card
 				text={"React Native"}
 				iconComponent={
 					<FaMobileAlt size={"8vmax"} color={colors.themeColor} />
 				}
-				className={"leftColSkillCards allSkillCards"}
-				marginTop={"8vw"}
+				className={"leftColSkillCards allSkillCards mt"}
+				button={"https://reactnative.dev/"}
 			/>
 			<Card
 				text={"NodeJS"}
@@ -62,6 +64,7 @@ export default function Skills({ myRef }) {
 					<FaNodeJs size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"rightColSkillCards allSkillCards "}
+				button={"https://nodejs.org/"}
 			/>
 		</div>
 	);

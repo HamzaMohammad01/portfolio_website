@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import colors from "../../config/colors";
 import Button from "../Button/Button";
-import { FaReact } from "react-icons/fa";
 import "./Navbar.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import { TbHexagonLetterH } from "react-icons/tb";
