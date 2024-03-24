@@ -12,14 +12,13 @@ export default function Card({
 	marginLeft,
 	marginRight,
 	size = "3vw",
-	width = "15vmax",
+	width = "fit-content",
 	height = "fit-content",
 	fontSize = "2.5vmax",
 	description,
 	className,
 	button,
 	margin,
-	paddingBottom,
 }) {
 	return (
 		<div
@@ -39,7 +38,6 @@ export default function Card({
 				marginRight: marginRight,
 				marginLeft: marginLeft,
 				margin,
-				paddingBottom,
 			}}
 			className={className}
 		>

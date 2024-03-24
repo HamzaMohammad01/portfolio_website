@@ -74,8 +74,7 @@ export default function Projects({ myRef }) {
 							description={e.description}
 							margin={"auto"}
 							button
-							width="fit-content"
-							paddingBottom={"4vmax"}
+							width="50%"
 						/>
 					</swiper-slide>
 				))}
