@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { FaReact } from "react-icons/fa";
 import "./Navbar.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
-import { TbSquareRoundedLetterH, TbHexagonLetterH } from "react-icons/tb";
+import { TbHexagonLetterH } from "react-icons/tb";
 
 export default function Navbar({ refs }) {
 	const navList = [

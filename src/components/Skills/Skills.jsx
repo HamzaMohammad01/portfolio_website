@@ -30,11 +30,11 @@ export default function Skills({ myRef }) {
 			</div>
 			<Card
 				text={"MongoDb"}
-				marginTop={"8vw"}
 				iconComponent={
 					<BiLogoMongodb size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"rightColSkillCards allSkillCards"}
+				marginTop={"8vw"}
 			/>
 
 			<Card
@@ -50,11 +50,11 @@ export default function Skills({ myRef }) {
 			/>
 			<Card
 				text={"React Native"}
-				marginTop={"8vw"}
 				iconComponent={
 					<FaMobileAlt size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"leftColSkillCards allSkillCards"}
+				marginTop={"8vw"}
 			/>
 			<Card
 				text={"NodeJS"}

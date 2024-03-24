@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaGithubAlt, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import colors from "../../config/colors";
 import "./MediaIcon.css";
 
@@ -16,13 +16,15 @@ export default function MediaIcon({
 }) {
 	return (
 		<div style={{ marginLeft, marginTop, marginBottom, marginRight }}>
-			<FaInstagram
-				color={color}
-				size={iconSize}
-				display={display}
-				style={{ marginRight: spaceBetween }}
-				className={`mediaIcon ${className}`}
-			/>
+			<a href="https://github.com/HamzaMohammad01" target="_blank">
+				<FaGithubAlt
+					color={color}
+					size={iconSize}
+					display={display}
+					style={{ marginRight: spaceBetween }}
+					className={`mediaIcon ${className}`}
+				/>
+			</a>
 			<a href="https://www.youtube.com/@hamzamohammad01" target="_blank">
 				<FaYoutube
 					color={color}
