@@ -34,13 +34,13 @@ export default function Skills({ myRef }) {
 					<BiLogoMongodb size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"rightColSkillCards allSkillCards mt"}
-				width={"10vmax"}
+				width={"12vmax"}
 			/>
 
 			<Card
 				text={"React"}
 				className={"leftColSkillCards allSkillCards"}
-				width={"10vmax"}
+				width={"12vmax"}
 			/>
 			<Card
 				text={"Figma"}
@@ -48,7 +48,7 @@ export default function Skills({ myRef }) {
 					<FaFigma size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"rightColSkillCards allSkillCards"}
-				width={"10vmax"}
+				width={"12vmax"}
 			/>
 			<Card
 				text={"React Native"}
@@ -56,7 +56,7 @@ export default function Skills({ myRef }) {
 					<FaMobileAlt size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"leftColSkillCards allSkillCards mt"}
-				width={"10vmax"}
+				width={"12vmax"}
 			/>
 			<Card
 				text={"NodeJS"}
@@ -64,7 +64,7 @@ export default function Skills({ myRef }) {
 					<FaNodeJs size={"8vmax"} color={colors.themeColor} />
 				}
 				className={"rightColSkillCards allSkillCards "}
-				width={"10vmax"}
+				width={"12vmax"}
 			/>
 		</div>
 	);
