@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import colors from "../../config/colors";
 import Button from "../Button/Button";
 import { BiLogoMongodb } from "react-icons/bi";
-import { FaFigma, FaNodeJs, FaMobileAlt } from "react-icons/fa";
+import { FaFigma, FaNodeJs, FaMobileAlt, FaReact } from "react-icons/fa";
 import "./Skills.css";
 
 export default function Skills({ myRef }) {
@@ -39,6 +39,9 @@ export default function Skills({ myRef }) {
 
 			<Card
 				text={"React"}
+				iconComponent={
+					<FaReact size={"8vmax"} color={colors.themeColor} />
+				}
 				className={"leftColSkillCards allSkillCards"}
 				width={"12vmax"}
 			/>

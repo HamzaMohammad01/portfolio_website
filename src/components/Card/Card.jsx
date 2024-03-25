@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import colors from "../../config/colors";
 import { FaReact } from "react-icons/fa";
 import Button from "../Button/Button";
@@ -6,7 +6,7 @@ import "./Card.css";
 
 export default function Card({
 	text,
-	// iconComponent = <FaReact size={"8vmax"} color={colors.themeColor} />,
+	iconComponent,
 	marginTop,
 	marginBottom,
 	marginLeft,
@@ -19,6 +19,7 @@ export default function Card({
 	className,
 	button,
 	margin,
+	image,
 }) {
 	return (
 		<div
@@ -39,14 +40,15 @@ export default function Card({
 				marginLeft: marginLeft,
 				margin,
 			}}
-			className={`${className} cards`}
+			className={className}
 		>
-			{/* {iconComponent} */}
+			{iconComponent}
 			<div
 				style={{
 					fontSize: fontSize,
 					marginTop: "20px",
 				}}
+				className="cardChild"
 			>
 				{text}
 			</div>
@@ -57,6 +59,7 @@ export default function Card({
 						marginTop: "1vw",
 						textAlign: "center",
 					}}
+					className="cardChild"
 				>
 					{description}
 				</div>
@@ -66,7 +69,7 @@ export default function Card({
 					href={button}
 					target="_blank"
 					style={{ textDecoration: "none" }}
-					rel="noreferrer"
+					className="cardChild"
 				>
 					<Button
 						text={"Get Source Code"}
@@ -78,6 +81,7 @@ export default function Card({
 					/>
 				</a>
 			)}
+			{image && <img src={image} alt="Project picture" />}
 		</div>
 	);
 }
