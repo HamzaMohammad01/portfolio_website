@@ -5,52 +5,34 @@ import Card from "../Card/Card";
 
 const projects = [
 	{
-		name: "Salah Time",
+		name: "Salah Time Api",
 		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
+			"Created using MongoDb, NodeJS and Express, this is the backend for Salah Time app and its is build to create a network to get know time of every mosque and never get late.",
+		uri: "https://github.com/HamzaMohammad01/namazTimeApi",
 	},
 	{
-		name: "Salah Tim",
+		name: "My Portfolio Website",
 		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
+			"This is my portfolio website created using React and here you will get to know me.",
+		uri: "https://github.com/HamzaMohammad01/portfolio_website",
 	},
 	{
-		name: "Salah Ti",
+		name: "Factor Calculator App",
 		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
+			"Created using React Native, this app gives of factors of any number",
+		uri: "https://github.com/HamzaMohammad01/factorCalculator/tree/v1.0.0",
 	},
 	{
-		name: "Salah Ti",
+		name: "Sleep Time Calculator",
 		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
+			"Created using React Native, this app gives you time when to sleep and when to wake using based on sleep science.",
+		uri: "https://github.com/HamzaMohammad01/sleepTimeCalculator/tree/v2.0.0",
 	},
 	{
-		name: "Salah Ti",
+		name: "ImageRecog",
 		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
-	},
-	{
-		name: "Salah Ti",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
-	},
-	{
-		name: "Salah Ti",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
-	},
-	{
-		name: "Salah Ti",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quia aspernatur nam",
-		uri: "",
+			"Created using JavaScript, this using Tesseract module of Google and it extracts text from images",
+		uri: "https://github.com/HamzaMohammad01/imageRecog",
 	},
 ];
 
@@ -73,7 +55,7 @@ export default function Projects({ myRef }) {
 							text={e.name}
 							description={e.description}
 							margin={"auto"}
-							button
+							button={e.uri}
 							width="50%"
 						/>
 					</swiper-slide>

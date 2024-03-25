@@ -15,3 +15,11 @@
 .mt {
 	margin-top: 8vw;
 }
+
+.cards {
+	transition: all 1s linear;
+}
+
+.cards:hover {
+	transform: rotateY(180deg);
+}

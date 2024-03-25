@@ -6,7 +6,7 @@ import "./Card.css";
 
 export default function Card({
 	text,
-	iconComponent = <FaReact size={"8vmax"} color={colors.themeColor} />,
+	// iconComponent = <FaReact size={"8vmax"} color={colors.themeColor} />,
 	marginTop,
 	marginBottom,
 	marginLeft,
@@ -39,9 +39,9 @@ export default function Card({
 				marginLeft: marginLeft,
 				margin,
 			}}
-			className={className}
+			className={`${className} cards`}
 		>
-			{iconComponent}
+			{/* {iconComponent} */}
 			<div
 				style={{
 					fontSize: fontSize,
@@ -66,9 +66,10 @@ export default function Card({
 					href={button}
 					target="_blank"
 					style={{ textDecoration: "none" }}
+					rel="noreferrer"
 				>
 					<Button
-						text={"Know More"}
+						text={"Get Source Code"}
 						marginRight="0px"
 						marginTop={"1.25vmax"}
 						size="3vw"
