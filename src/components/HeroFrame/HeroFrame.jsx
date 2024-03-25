@@ -46,5 +46,6 @@ const styles = {
 	text1: {
 		fontSize: "4vmax",
 		fontWeight: "800",
+		animation: "move 3s linear 0.5s infinite alternate-reverse",
 	},
 };
