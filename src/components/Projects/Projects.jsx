@@ -12,7 +12,7 @@ const projects = [
 	{
 		name: "Salah Time Api",
 		description:
-			"Created using MongoDb, NodeJS and Express, this is the backend for Salah Time app and its is build to create a network to get know time of every mosque and never get late.",
+			"Created using MongoDb, NodeJS and Express, this is the backend for Salah Time app and it is build to create a network to get to know time of every mosque and never get late.",
 		uri: "https://github.com/HamzaMohammad01/namazTimeApi",
 		iconComponent: <FaMosque size={"8vmax"} color={colors.themeColor} />,
 	},
@@ -52,7 +52,7 @@ const projects = [
 	{
 		name: "ImageRecog",
 		description:
-			"Created using JavaScript, this using Tesseract module of Google and it extracts text from images",
+			"Created using JavaScript, this uses Tesseract module of Google and it extracts text from images",
 		uri: "https://github.com/HamzaMohammad01/imageRecog",
 		iconComponent: (
 			<TbTextRecognition size={"8vmax"} color={colors.themeColor} />

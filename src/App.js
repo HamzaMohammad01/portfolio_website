@@ -32,7 +32,11 @@ export default function App() {
 			<Contact myRef={refs.contactRef} />
 			<Footer />
 			<div style={styles.iconContainer} onClick={handleClick}>
-				<LiaArrowUpSolid style={styles.icon} size={"2vmax"} />
+				<LiaArrowUpSolid
+					style={styles.icon}
+					size={"2vmax"}
+					color={colors.themeColor}
+				/>
 			</div>
 		</div>
 	);
@@ -57,7 +61,7 @@ const styles = {
 		height: "5vmax",
 		width: "5vmax",
 		borderRadius: "50%",
-		backgroundColor: colors.themeColor,
+		backgroundColor: colors.white,
 		position: "fixed",
 		bottom: "20px",
 		right: "20px",

@@ -7,13 +7,17 @@ import { TbHexagonLetterH } from "react-icons/tb";
 
 export default function Navbar({ refs }) {
 	const navList = [
-		{ name: "Home", href: refs.homeRef },
+		{ name: "About", href: refs.aboutRef },
 		{ name: "Skills", href: refs.skillsRef },
 		{ name: "Projects", href: refs.projectsRef },
 		{ name: "Contact", href: refs.contactRef },
 	];
 
 	const handleOnClick = (ref) => {
+		if (typeof ref == "string") {
+			console.log("Yes");
+			return;
+		}
 		window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
 	};
 
@@ -21,18 +25,11 @@ export default function Navbar({ refs }) {
 	return (
 		<div style={styles.container} className="container">
 			<div style={styles.rightContainer} className="rightContainer">
-				{/* <div
-					style={styles.logoBorder}
-					id="logoBorder"
-					className="logoBorder"
-					onClick={() => handleOnClick(refs.homeRef)}
-				> */}
 				<TbHexagonLetterH
 					style={styles.logo}
 					className="logo"
 					onClick={() => handleOnClick(refs.homeRef)}
 				/>
-				{/* </div> */}
 			</div>
 			<div className="hamBurgerContainer">
 				<HamburgerMenu navBarRef={navBar} />
@@ -51,14 +48,19 @@ export default function Navbar({ refs }) {
 							onClick={() => handleOnClick(e.href)}
 						/>
 					))}
-					<Button
-						text={"Hire Me!"}
-						width="2vmax"
-						className={"navBtn"}
-						backgroundColor={colors.themeColor}
-						borderColor={colors.white}
-						onClick={() => handleOnClick(refs.contactRef)}
-					/>
+					<a
+						href="mailto:mohd2010hamza@gmail.com"
+						target="_blank"
+						style={{ textDecoration: "none" }}
+					>
+						<Button
+							text={"Hire Me!"}
+							width="2vmax"
+							className={"navBtn"}
+							backgroundColor={colors.themeColor}
+							borderColor={colors.white}
+						/>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -98,6 +100,7 @@ const styles = {
 		cursor: "pointer",
 		height: "12vmin",
 		width: "12vmin",
+		paddingTop: "0.5vmax",
 	},
 	navContainer: {
 		display: "flex",

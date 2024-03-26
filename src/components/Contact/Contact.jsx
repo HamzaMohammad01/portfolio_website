@@ -29,9 +29,19 @@ export default function Contact({ myRef }) {
 				<div style={styles.text2} className="text2">
 					Touch
 				</div>
+				{/* <div
+					style={{
+						backgroundColor: colors.themeColor,
+						position: "relative",
+						top: "15rem",
+						right: "22rem",
+						height: "2vmax",
+						width: "2vmax",
+					}}
+				></div> */}
 			</div>
 			<form
-				action="https://formsubmit.co/e0b82004d939376ccefba54ffaad9340"
+				action="https://formbold.com/s/67GbB"
 				method="POST"
 				className="form"
 				style={styles.form}
