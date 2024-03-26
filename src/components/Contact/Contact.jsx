@@ -6,19 +6,35 @@ import "./Contact.css";
 
 export default function Contact({ myRef }) {
 	const [inputs, setInputs] = useState({});
+	const userNameRe = /^[a-zA-Z0-9]+$/;
+	const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	const descriptionRe = /^.{1,4000}$/;
+	const [disabled, setDisabled] = useState(
+		!(
+			userNameRe.test(inputs.username) &&
+			emailRe.test(inputs.email) &&
+			descriptionRe.test(inputs.description)
+		)
+	);
 
 	const handleChange = (event) => {
 		const name = event.target.name;
 		const value = event.target.value;
 		setInputs((values) => ({ ...values, [name]: value }));
+		if (value.length === 0) setDisabled(true);
+		else {
+			setDisabled(
+				!(
+					userNameRe.test(inputs.username) &&
+					emailRe.test(inputs.email) &&
+					descriptionRe.test(inputs.description)
+				)
+			);
+		}
 	};
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		alert(inputs);
-	};
 	return (
-		<div style={styles.container} className="container" ref={myRef}>
+		<aside style={styles.container} className="container" ref={myRef}>
 			<div style={styles.textContainer} className="textContainer">
 				<div style={styles.text1} className="text1">
 					Get
@@ -29,16 +45,6 @@ export default function Contact({ myRef }) {
 				<div style={styles.text2} className="text2">
 					Touch
 				</div>
-				{/* <div
-					style={{
-						backgroundColor: colors.themeColor,
-						position: "relative",
-						top: "15rem",
-						right: "22rem",
-						height: "2vmax",
-						width: "2vmax",
-					}}
-				></div> */}
 			</div>
 			<form
 				action="https://formbold.com/s/67GbB"
@@ -77,15 +83,11 @@ export default function Contact({ myRef }) {
 					type={"submit"}
 					size="5vmax"
 					marginTop={"2vw"}
+					onClick={() => setInputs({})}
+					disabled={disabled}
 				/>
 			</form>
-			{/* <MediaIcon
-				marginLeft={"auto"}
-				marginTop={"auto"}
-				marginBottom={"auto"}
-				marginRight={"1.5vw"}
-			/> */}
-		</div>
+		</aside>
 	);
 }
 

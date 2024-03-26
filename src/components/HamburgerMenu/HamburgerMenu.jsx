@@ -10,7 +10,6 @@ export default function HamburgerMenu({ navBarRef }) {
 	const three = useRef();
 
 	const handleHamburgerPress = () => {
-		console.log("clicked");
 		navBarRef.current.classList.toggle("navTranslate");
 		ham.current.classList.toggle("hamX");
 		lines.current.classList.toggle("linesX");
@@ -21,7 +20,7 @@ export default function HamburgerMenu({ navBarRef }) {
 
 	return (
 		<div
-			class="ham"
+			className="ham"
 			id="ham"
 			style={styles.container}
 			onClick={handleHamburgerPress}

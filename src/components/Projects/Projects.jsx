@@ -22,7 +22,11 @@ const projects = [
 			"This is my portfolio website created using React and here you will get to know me.",
 		uri: "https://github.com/HamzaMohammad01/portfolio_website",
 		iconComponent: (
-			<img style={{ height: "15vmax", width: "35vmax" }} src={pWebsite} />
+			<img
+				style={{ height: "15vmax", width: "35vmax" }}
+				src={pWebsite}
+				alt="portfolio website"
+			/>
 		),
 	},
 	{
@@ -34,6 +38,7 @@ const projects = [
 			<img
 				style={{ height: "18vmax", width: "8vmax" }}
 				src={factorCalculator}
+				alt="factor calculator app"
 			/>
 		),
 	},
@@ -46,6 +51,7 @@ const projects = [
 			<img
 				style={{ height: "18vmax", width: "8vmax" }}
 				src={sleepTimeCalculator}
+				alt="sleep time calculator"
 			/>
 		),
 	},
@@ -62,7 +68,7 @@ const projects = [
 
 export default function Projects({ myRef }) {
 	return (
-		<div style={styles.container} ref={myRef}>
+		<main style={styles.container} ref={myRef}>
 			<div style={styles.textContainer} className="textContainer">
 				<div style={styles.text1}>Recent</div>
 				<div style={styles.text2}>Projects</div>
@@ -76,12 +82,13 @@ export default function Projects({ myRef }) {
 				space-between={30}
 			>
 				{projects.map((e) => (
-					<swiper-slide>
+					<swiper-slide key={e.uri} lazy={true}>
 						<Card
 							text={e.name}
 							description={e.description}
 							margin={"auto"}
 							button={e.uri}
+							ariaLabel={`${e.name} github source code`}
 							className={"card"}
 							width="70%"
 							iconComponent={e.iconComponent}
@@ -89,7 +96,7 @@ export default function Projects({ myRef }) {
 					</swiper-slide>
 				))}
 			</swiper-container>
-		</div>
+		</main>
 	);
 }
 

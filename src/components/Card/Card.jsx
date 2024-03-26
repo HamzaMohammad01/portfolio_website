@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React from "react";
 import colors from "../../config/colors";
-import { FaReact } from "react-icons/fa";
 import Button from "../Button/Button";
 import "./Card.css";
 
@@ -19,7 +18,7 @@ export default function Card({
 	className,
 	button,
 	margin,
-	image,
+	ariaLabel,
 }) {
 	return (
 		<div
@@ -68,8 +67,10 @@ export default function Card({
 				<a
 					href={button}
 					target="_blank"
+					aria-label={ariaLabel}
 					style={{ textDecoration: "none" }}
 					className="cardChild"
+					rel="noreferrer"
 				>
 					<Button
 						text={"Get Source Code"}
@@ -81,7 +82,6 @@ export default function Card({
 					/>
 				</a>
 			)}
-			{image && <img src={image} alt="Project picture" />}
 		</div>
 	);
 }

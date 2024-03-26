@@ -1,7 +1,6 @@
 @media only screen and (max-width: 650px) {
 	#skillsContainer {
 		grid-template-columns: auto auto !important;
-		/* column-gap: 2vmax !important; */
 	}
 	#text {
 		font-size: 15vw !important;

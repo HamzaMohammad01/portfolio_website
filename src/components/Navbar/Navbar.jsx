@@ -14,16 +14,12 @@ export default function Navbar({ refs }) {
 	];
 
 	const handleOnClick = (ref) => {
-		if (typeof ref == "string") {
-			console.log("Yes");
-			return;
-		}
 		window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
 	};
 
 	const navBar = useRef();
 	return (
-		<div style={styles.container} className="container">
+		<header style={styles.container} className="container">
 			<div style={styles.rightContainer} className="rightContainer">
 				<TbHexagonLetterH
 					style={styles.logo}
@@ -31,7 +27,7 @@ export default function Navbar({ refs }) {
 					onClick={() => handleOnClick(refs.homeRef)}
 				/>
 			</div>
-			<div className="hamBurgerContainer">
+			<nav className="hamBurgerContainer">
 				<HamburgerMenu navBarRef={navBar} />
 				<div
 					style={styles.navContainer}
@@ -52,6 +48,8 @@ export default function Navbar({ refs }) {
 						href="mailto:mohd2010hamza@gmail.com"
 						target="_blank"
 						style={{ textDecoration: "none" }}
+						rel="noreferrer"
+						aria-label="Email ID"
 					>
 						<Button
 							text={"Hire Me!"}
@@ -62,8 +60,8 @@ export default function Navbar({ refs }) {
 						/>
 					</a>
 				</div>
-			</div>
-		</div>
+			</nav>
+		</header>
 	);
 }
 
@@ -81,20 +79,6 @@ const styles = {
 		overflow: "visible",
 		flex: 1,
 	},
-	// logoBorder: {
-	// 	border: `2px solid ${colors.themeColor}`,
-	// 	cursor: "pointer",
-	// 	borderRadius: "50%",
-	// 	left: "5px",
-	// 	top: "5px",
-	// 	position: "absolute",
-	// 	height: "max-content",
-	// 	width: "max-content",
-	// 	display: "flex",
-	// 	alignItems: "center",
-	// 	justifyContent: "center",
-	// 	padding: "10px",
-	// },
 	logo: {
 		color: colors.themeColor,
 		cursor: "pointer",

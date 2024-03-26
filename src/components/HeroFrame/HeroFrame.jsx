@@ -8,7 +8,7 @@ export default function HeroFrame({ refs }) {
 		window.scrollTo({ top: ref.current.offsetTop, behavior: "smooth" });
 	};
 	return (
-		<div style={styles.container}>
+		<main style={styles.container}>
 			<MediaIcon />
 			<div
 				style={{
@@ -29,7 +29,7 @@ export default function HeroFrame({ refs }) {
 					onClick={() => handleOnClick(refs.aboutRef)}
 				/>
 			</div>
-		</div>
+		</main>
 	);
 }
 

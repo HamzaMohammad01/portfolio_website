@@ -8,7 +8,7 @@ import "./Skills.css";
 
 export default function Skills({ myRef }) {
 	return (
-		<div style={styles.container} id="skillsContainer" ref={myRef}>
+		<main style={styles.container} id="skillsContainer" ref={myRef}>
 			<div>
 				<div style={styles.text1} id="text">
 					My
@@ -69,7 +69,7 @@ export default function Skills({ myRef }) {
 				className={"rightColSkillCards allSkillCards "}
 				width={"12vmax"}
 			/>
-		</div>
+		</main>
 	);
 }
 
@@ -81,7 +81,6 @@ const styles = {
 		gridTemplateColumns: "auto auto auto",
 		paddingLeft: "2vw",
 		columnGap: "4vmax",
-		// justifyContent: "center",
 	},
 	text1: {
 		fontSize: "5vw",

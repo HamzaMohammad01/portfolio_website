@@ -15,8 +15,13 @@ export default function MediaIcon({
 	className,
 }) {
 	return (
-		<div style={{ marginLeft, marginTop, marginBottom, marginRight }}>
-			<a href="https://github.com/HamzaMohammad01" target="_blank">
+		<section style={{ marginLeft, marginTop, marginBottom, marginRight }}>
+			<a
+				href="https://github.com/HamzaMohammad01"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="Hamza Mohamamd Github Account"
+			>
 				<FaGithubAlt
 					color={color}
 					size={iconSize}
@@ -25,7 +30,12 @@ export default function MediaIcon({
 					className={`mediaIcon ${className}`}
 				/>
 			</a>
-			<a href="https://www.youtube.com/@hamzamohammad01" target="_blank">
+			<a
+				href="https://www.youtube.com/@hamzamohammad01"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="Hamza Mohamamd Youtube Account"
+			>
 				<FaYoutube
 					color={color}
 					size={iconSize}
@@ -34,14 +44,15 @@ export default function MediaIcon({
 					className={`mediaIcon ${className}`}
 				/>
 			</a>
-			<a href="//wa.me/+916388910725" target="_blank">
+			<a href="//wa.me/+916388910725" target="_blank" rel="noreferrer">
 				<FaWhatsapp
 					color={color}
 					size={iconSize}
 					display={display}
 					className={`mediaIcon ${className}`}
+					aria-label="Hamza Mohamamd Whatsapp Number"
 				/>
 			</a>
-		</div>
+		</section>
 	);
 }

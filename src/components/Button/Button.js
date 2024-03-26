@@ -17,6 +17,7 @@ export default function Button({
 	className,
 	onClick,
 	type,
+	disabled,
 	otherProps,
 }) {
 	return (
@@ -45,6 +46,7 @@ export default function Button({
 			className={`btn ${className}`}
 			onClick={onClick}
 			type={type}
+			disabled={disabled}
 		>
 			{text}
 		</button>

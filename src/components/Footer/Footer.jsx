@@ -4,7 +4,7 @@ import MediaIcon from "../MediaIcon/MediaIcon";
 
 export default function Footer() {
 	return (
-		<div style={styles.container}>
+		<footer style={styles.container}>
 			<div>mohd2010Hamza@gmail.com</div>
 			<MediaIcon
 				display="relative"
@@ -14,7 +14,7 @@ export default function Footer() {
 				spaceBetween={"1vmax"}
 				className={"mediaRowIcon"}
 			/>
-		</div>
+		</footer>
 	);
 }
 
