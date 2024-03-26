@@ -2,9 +2,9 @@ import React from "react";
 import colors from "../../config/colors";
 import "./Projects.css";
 import Card from "../Card/Card";
-import pWebsite from "../../images/pWebsite.png";
-import sleepTimeCalculator from "../../images/SleepTimeCalculator.png";
-import factorCalculator from "../../images/factorCalculator.png";
+import pWebsite from "../../images/pWebsite.webp";
+import sleepTimeCalculator from "../../images/SleepTimeCalculator.webp";
+import factorCalculator from "../../images/factorCalculator.webp";
 import { FaMosque } from "react-icons/fa6";
 import { TbTextRecognition } from "react-icons/tb";
 
@@ -23,9 +23,14 @@ const projects = [
 		uri: "https://github.com/HamzaMohammad01/portfolio_website",
 		iconComponent: (
 			<img
-				style={{ height: "15vmax", width: "35vmax" }}
+				style={{
+					height: "fit-content",
+					width: "35vmax",
+					objectFit: "cover",
+				}}
 				src={pWebsite}
 				alt="portfolio website"
+				loading="lazy"
 			/>
 		),
 	},
@@ -36,9 +41,14 @@ const projects = [
 		uri: "https://github.com/HamzaMohammad01/factorCalculator/tree/v1.0.0",
 		iconComponent: (
 			<img
-				style={{ height: "18vmax", width: "8vmax" }}
+				style={{
+					height: "18vmax",
+					width: "fit-content",
+					objectFit: "cover",
+				}}
 				src={factorCalculator}
 				alt="factor calculator app"
+				loading="lazy"
 			/>
 		),
 	},
@@ -49,9 +59,14 @@ const projects = [
 		uri: "https://github.com/HamzaMohammad01/sleepTimeCalculator/tree/v2.0.0",
 		iconComponent: (
 			<img
-				style={{ height: "18vmax", width: "8vmax" }}
+				style={{
+					height: "18vmax",
+					width: "fit-content",
+					objectFit: "cover",
+				}}
 				src={sleepTimeCalculator}
 				alt="sleep time calculator"
+				loading="lazy"
 			/>
 		),
 	},
