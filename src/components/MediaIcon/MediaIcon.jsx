@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithubAlt, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaGithubAlt, FaYoutube, FaWhatsapp, FaCodepen } from "react-icons/fa";
 import colors from "../../config/colors";
 import "./MediaIcon.css";
 
@@ -31,6 +31,20 @@ export default function MediaIcon({
 				/>
 			</a>
 			<a
+				href="https://codepen.io/HamzaMohammad01/"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="Hamza Mohamamd Codepen"
+			>
+				<FaCodepen
+					color={color}
+					size={iconSize}
+					display={display}
+					style={{ marginRight: spaceBetween }}
+					className={`mediaIcon ${className}`}
+				/>
+			</a>
+			<a
 				href="https://www.youtube.com/@hamzamohammad01"
 				target="_blank"
 				rel="noreferrer"
@@ -44,13 +58,17 @@ export default function MediaIcon({
 					className={`mediaIcon ${className}`}
 				/>
 			</a>
-			<a href="//wa.me/+916388910725" target="_blank" rel="noreferrer">
+			<a
+				href="//wa.me/+916388910725"
+				target="_blank"
+				rel="noreferrer"
+				aria-label="Hamza Mohamamd Whatsapp Number"
+			>
 				<FaWhatsapp
 					color={color}
 					size={iconSize}
 					display={display}
 					className={`mediaIcon ${className}`}
-					aria-label="Hamza Mohamamd Whatsapp Number"
 				/>
 			</a>
 		</section>
